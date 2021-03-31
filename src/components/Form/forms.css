@@ -1,0 +1,19 @@
+form{
+    display: block;
+    flex-direction: column;
+}
+
+.container{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.input-form>TextField{
+    width: 200px;
+}
+.input-form{
+    margin-top: 20px;
+}
+.file-input{
+    align-items: center;
+}

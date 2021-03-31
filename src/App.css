@@ -1,11 +1,10 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.appBar>h3{
+  text-align: center;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
