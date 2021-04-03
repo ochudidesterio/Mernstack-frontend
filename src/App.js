@@ -13,10 +13,10 @@ import{ Container,AppBar,Typography,Grow,Grid }  from '@material-ui/core'
 function App() {
   const [currentId,setCurrentId] = useState(null)
   const classes=useStyles()
-   const dispatch = useDispatch()
+  const dispatch = useDispatch()
    useEffect(() => {
      dispatch(getPost())
-     }, [dispatch])
+     }, [currentId,dispatch])
   return (
     <>
    
@@ -29,12 +29,12 @@ function App() {
       </AppBar>
       <Grow in>
         <Container>
-          <Grid container justify="space-between" alignItems="stretch" spacing={3}>
+          <Grid container className={classes.mainContainer} justify="space-between" alignItems="stretch" spacing={3}>
             <Grid item xs={12} sm={7}>
              <Posts setCurrentId={setCurrentId}/>
             </Grid>
             <Grid item xs={12} sm={4}>
-               <Form currentId={currentId}/>
+               <Form currentId={currentId} setCurrentId={setCurrentId}/>
             </Grid>
           </Grid>
         </Container>
